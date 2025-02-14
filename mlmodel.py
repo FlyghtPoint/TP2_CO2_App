@@ -9,14 +9,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 
 consumption_df = pd.read_csv('./FuelConsumption.csv')
-# print(consumption_df.head())
-# consumption_df.info()
 le=LabelEncoder()
-# print(consumption_df['MAKE'].unique())
-# print(consumption_df['MODEL'].unique())
-# print(consumption_df['VEHICLECLASS'].unique())
-# print(consumption_df['TRANSMISSION'].unique())
-# print(consumption_df['FUELTYPE'].unique())
 consumption_df['MAKE']=le.fit_transform(consumption_df['MAKE'])
 consumption_df['MODEL']=le.fit_transform(consumption_df['MODEL'])
 consumption_df['VEHICLECLASS']=le.fit_transform(consumption_df['VEHICLECLASS'])
